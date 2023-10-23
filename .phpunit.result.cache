@@ -1,0 +1,1 @@
+{"version":1,"defects":{"LoginTest::test_login":5,"LoginTest::test_logout":8},"times":{"LoginTest::test_login":0.122,"LoginTest::test_logout":0.032}}

@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight:bold;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #212121;
+    background-color: #ffffff;
+}
+
+input {
+    border-radius: 15px;
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.dropdown-menu{
+    border-radius: 15px;
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.dropdown-servico,
+.dropdown-barbeiro,
+.dropdown-horario{
+    border-radius: 15px;
+    outline: 0;
+    background: #ffffff;
+    width: 30%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+
+input:focus {
+    border-color: #08aa6c;
+}
+
+.btn,
+.btn-add,
+.btn-edit,
+.btn-delete {
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #08aa6c;
+    border: 0;
+    text-decoration: none;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-marcacao {
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #08aa6c;
+    border: 0;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    width: 300px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+   
+  } 
+
+  .btn-marcacao1 {
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #eceeed;
+    border: 0;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    width: 300px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }  
+ 
+
+
+.btn-comprar{
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #08aa6c;
+    border: 0;
+    text-decoration: none;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    width: 150px;
+}
+
+.btn-processar {
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #08aa6c;
+  border: 0;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-finalizar {
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #08aa6c;
+  border: 0;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-with-border {
+  border: 1px solid black;
+}
+
+
+.selected {
+  background-color: lightblue;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btn-add {
+    background-color: #08aa6c;
+    font-weight: bold;
+    
+}
+
+.btn-delete {
+    background-color: #b72424;
+}
+.btn-edit {
+    margin-right: 3px;
+    background-color: #08aa6c;
+}
+
+.btn-logout {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #212121;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+.btn-logout:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn-login {
+  border-radius: 15px;
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #08aa6c;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 16px;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  width: 150px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.btn:active,
+.btn:focus {
+    background: #08aa6c;
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 0.5rem 0.5rem;
+   
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: #ff4040;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: #00a762;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+
+/* Login/Signup forms*/
+
+.login-signup-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#08aa6c; 
+}
+
+.login-signup-form .form {
+    border-radius: 20px;
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 34px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-form .title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-signup-form .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-signup-form .form .message a {
+    color: #08aa6c;
+    text-decoration: none;
+}
+
+/* Login/Signup form */
+
+
+#defaultLayout {
+    display: flex;
+}
+
+#defaultLayout aside {
+    width: 240px;
+    background-color: #08aa6c;
+    padding: 1rem
+}
+
+#defaultLayout aside > a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+#defaultLayout aside > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#defaultLayout .content {
+    flex: 1;
+}
+
+#defaultLayout header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#defaultLayout main {
+    padding: 2rem;
+}
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.imagem-login {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 110px;
+    
+  }
+
+.imagem-cabelo,
+.imagem-barba{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.no-underline {
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .no-underline:hover {
+    background-color: #f5f5f5;
+    border-color: #aaa;
+    color: #111;
+  }
+  
+
+
+[name="filtro"]{
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #08aa6c;
+    font-size: 16px;
+    font-weight:bolder;
+    line-height: 1.5;
+    color: white;
+    width: 90px;
+    margin-left: 10px;
+
+  }
+  
+ 
+  [name="filtro"]::-ms-expand {
+    display: none;
+  }
+  
+  [name="filtro"]::-webkit-select-placeholder {
+    color: #6c757d;
+  }
+  
+  [name="filtro"]::-moz-placeholder {
+    color: #6c757d;
+  }
+  
+  [name="filtro"]:-ms-input-placeholder {
+    color: #6c757d;
+  }
+  
+  [name="filtro"]::placeholder {
+    color: #6c757d;
+  }
+  
+
+  [name="filtro"]:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: none;
+  }
+  
+
+  [name="filtro"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+  
+ 
+  [name="filtro"] option:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+  }
+
+  .img-barbeiro {
+    height: 230px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  .img-produtos {
+    height: 230px;
+    width: 210px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+  [name="ordenar"] {
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #08aa6c;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  [name="ordenar"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+
+  [name="ordenar1"] {
+    padding: 3px;
+    border-radius: 4px;
+    border: 2px solid #08aa6c;
+    background-color: #08aa6c;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  [name="ordenar1"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    
+  }
+  select[name="ordenar1"] {
+    height: 30px;
+    width: 275px;
+    
+  }
+
+  [name="filtro1"] {
+    padding: 3px;
+    border-radius: 4px;
+    border: 2px solid #08aa6c;
+    background-color: #08aa6c;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  [name="filtro1"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    
+  }
+  select[name="filtro1"] {
+    height: 33px;
+    width: 130px;
+    
+  }
+
+
+
+  [name="ordenar2"] {
+    padding: 3px;
+    border-radius: 4px;
+    border: 2px solid #08aa6c;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: black;
+    width: 100px;
+    margin-left: 10px;
+  }
+
+  [name="ordenar2"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    
+  }
+  select[name="ordenar2"] {
+    height: 30px;
+    width: 275px;
+    
+  }
+  [name="especialidade"] {
+   
+    border: 2px solid #ccc;
+   
+  }
+
+  [name="especialidade"] option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s ease;
+  }
+
+  [name="especialidade"]:focus {
+    border: 2px solid #08aa6c;
+  }
+
+  [name="especialidade"] option:checked:focus {
+    border: 2px solid #08aa6c;
+  }
+  
+  [name="especialidade"] option:checked {
+    border: px solid #08aa6c;
+  }
+
+  
+  .dropdown-servico option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+  }
+
+  .dropdown-servico:focus {
+    border: 2px solid #08aa6c;
+  }
+
+  .dropdown-servico option:checked:focus {
+    border: 2px solid #08aa6c;
+  }
+  
+  .dropdown-servico option:checked {
+    border: px solid #08aa6c;
+  }
+
+
+  .dropdown-barbeiro option {
+    color: #495057;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0;
+    
+  }
+
+  .dropdown-barbeiro:focus {
+    border: 2px solid #08aa6c;
+  }
+
+  .dropdown-barbeiro option:checked:focus {
+    border: 2px solid #08aa6c;
+  }
+  
+  .dropdown-barbeiro option:checked {
+    border: px solid #08aa6c;
+  }
+  [name="quanti"]{
+  padding: 4px;
+   width: 40px; 
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 20px;
+  }
+  
+  .menu a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #08aa6c;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  }
+  
+  .menu a:hover {
+    background-color: #08aa6c;
+  }
+  
+  .produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .produto {
+    width: 33.3%;
+    padding: 20px;
+  }
+
+  .dropdown {
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  
+  .dropdown li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dropdown li:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
